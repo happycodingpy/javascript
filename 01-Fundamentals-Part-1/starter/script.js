@@ -210,3 +210,44 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
     console.log('Someone else should drive...')
 }
+
+// the switch statements
+ const day = 'monday';
+
+ switch (day) {
+    case 'monday':
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'thursday':
+        console.log('Day of rest');
+        break;
+    case 'wednesday':
+        console.log('Write code examples');
+        break;
+    case 'wednesday':
+        console.log('Record videos');
+        break;        
+    default:
+        console.log('Today is the day, is the first day my school');
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+
+} else if (day === 'wednesday' || 'tuesday') {
+    console.log('Day of rest');
+
+} else if (day === 'friday') {
+    console.log('Write code examples');
+    
+} else {
+    console.log('Today is the day, is the first day my school')
+}
