@@ -172,7 +172,8 @@ if (agePepe === 18) console.log('You just became an adult');
 console.log('18'==18);
 console.log('18'===18);
 
-const favourite = Number(prompt("What's your favourite number?"));
+//const favourite = Number(prompt("What's your favourite number?"));
+const favourite = 23;
 console.log(favourite)
 
 if (favourite === 23) {
@@ -185,4 +186,27 @@ if (favourite === 23) {
 
 if (favourite !== 23) console.log('Why not 23?')
 
-// boolean logic
+// logical operators
+const hasDriversLicense = true;
+const hasGoodVision = true;
+//const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+console.log(!hasGoodVision);
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log('Sarah is able to drive!')
+} else {
+    console.log('Someone else should drive...')
+}
+
+const isTired = false;
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!')
+} else {
+    console.log('Someone else should drive...')
+}
