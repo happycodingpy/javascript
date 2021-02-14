@@ -235,5 +235,108 @@ console.log(pepito.getSummary());
 
 // For loop
 for (let i = 0; i <= 4; i++) {
-    console.log('Javascript is amazing!')
+    console.log(`Javascript is amazing! ${i}`)
+}
+
+// looping array - break and continue
+// const pepiArray = {
+//     // properties: firstName, country, gender, friends,etc
+//     firstName: 'Pepi',
+//     country:'Suiza',
+//     gender: 'Dinosaur'
+//     //friends: ['Firefly', 'Butterfly,', 'Pterodáctilo']
+    
+// };
+
+const pepiArray = ['Pepi', 'Suiza', 'Dinosaur',true,5];
+const types = [];
+
+for (let i=0; i<pepiArray.length; i++) {
+    // Reading from pepiArray 
+    console.log(pepiArray[i], typeof(pepiArray[i]));
+    
+    // Filling types array
+    // types[i] = typeof pepiArray[i];
+    // console.log(types[i]);
+    types.push(pepiArray[i])
+    console.log(types[i])
+}
+
+const años = [1991,2005,1939, 2007,1945,1920,1915,1872];
+const edad = [];
+
+for (let i = 0; i < años.length; i++) {
+    edad.push(2021 - años[i]);
+}
+console.log(edad);  
+
+// continue and break
+// continue sale de la itereacion del bucle actual y continua con el siguiente
+// break termina rapidamente con el loop
+
+const algunosDatos = ['Jonas', 23, true, 'Suiza', 'España', ['Juan', 'Carlos','Junior'],25,33,false];
+
+console.log('---ONLY STRING---');
+for (let i=0; i<algunosDatos.length; i++) {
+    if (typeof algunosDatos[i] !== 'string') continue;
+    console.log(algunosDatos[i], typeof algunosDatos[i])
+}
+
+console.log('--ONLY BOOLEAN--')
+for (let i=0; i<algunosDatos.length; i++) {
+    if (typeof algunosDatos[i] !== 'boolean') continue;
+    console.log(algunosDatos[i], typeof algunosDatos[i])
+}
+
+console.log('--ONLY NUMBER--')
+for (let i=0; i<algunosDatos.length; i++) {
+    if (typeof algunosDatos[i] !== 'number') continue;
+    console.log(algunosDatos[i], typeof algunosDatos[i])
+}
+
+console.log('--BREAK WITH NUMBER--')
+for (let i=0; i<algunosDatos.length; i++) {
+    if (typeof algunosDatos[i] === 'number') break;
+    console.log(algunosDatos[i], typeof algunosDatos[i])
+}
+
+// console.log('--ONLY REVERSE--')
+// for (let i=0; algunosDatos.length; i++) {
+//     console.log(algunosDatos.reverse())
+// }
+
+// for (let i= algunosDatos.length -1; i>=0; i--){
+//     console.log(i, algunosDatos[i])
+// }
+
+// Loops in Loops
+console.log()
+for (let i=0; i<4; i++) {
+    console.log(`---- Starting exercise ${i}`);
+
+    for (let j=0; j<6; j++){
+        console.log(`Exercise ${i}: Lifting wight repetition ${j}` )
+    }
+}
+
+// The while loop
+for (let i=0; i<5; i++) {
+    console.log(`FOR: Hello Js ${i}`)
+}
+
+let i = 0;
+while (i<=5) {
+    console.log(`WHILE: Hello Js ${i}`)
+    i++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    // creamos una nueva condicion y se ejecuta nuevamente
+    dice = Math.trunc(Math.random() * 6) + 1;
+
+    if (dice===6) console.log('Loop is about to end...')
 }
