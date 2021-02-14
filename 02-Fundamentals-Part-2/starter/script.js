@@ -233,4 +233,7 @@ console.log(pepito.calcAge());
 console.log(pepito.getSummary());
 //console.log(pepito['calcAge'](1991))
 
-
+// For loop
+for (let i = 0; i <= 4; i++) {
+    console.log('Javascript is amazing!')
+}
