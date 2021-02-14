@@ -207,7 +207,7 @@ const pepito = {
     gender: 'Dinosaur',
     friends: ['Firefly', 'Butterfly,', 'Pterodáctilo'],
     hasDriversLicense: true,
-    birthYear: 435,
+    birthYear: 1985,
 
     // calcAge: function(birthYear) {
     //     return 2021 - birthYear;
@@ -220,8 +220,17 @@ const pepito = {
     calcAge: function() {
         this.age = 2021 - this.birthYear;
         return this.age;
+    },
+
+    // Challenge
+    // Jonas is a 36-years old teacher, and he has a driver's license
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} years old teacher, and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license`;
     }
 }
-console.log(pepito.calcAge());
 console.log(pepito.age);
+console.log(pepito.calcAge());
+console.log(pepito.getSummary());
 //console.log(pepito['calcAge'](1991))
+
+
