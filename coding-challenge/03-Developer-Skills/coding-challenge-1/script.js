@@ -39,5 +39,5 @@ const printForecast = arr => {
 };
 const d1 = printForecast(data1);
 const d2 = printForecast(data2);
-console.log(d1);
-console.log(d2);
+console.log(`... ${d1}`);
+console.log(`... ${d2}`);
