@@ -15,3 +15,19 @@
 // Test data:
 // § Data 1: [17, 21, 23]
 // § Data 2: [12, 5, -5, 0, 4]
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = arr => {
+  let day = '';
+  for (let i = 0; i < arr.length; i++) {
+    day += `${arr[i]}ºC in ${i + 1} days, `;
+  }
+  console.log(day);
+  return day;
+};
+const d1 = printForecast(data1);
+const d2 = printForecast(data2);
+console.log(d1);
+console.log(d2);
