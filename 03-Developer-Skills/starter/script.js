@@ -34,5 +34,6 @@ const calcTempsAmplitude = (temps) => {
     if (temps[i] < min) min = curTemp;
   }
   console.log(max, min);
+  return max - min;
 };
 calcTempsAmplitude(temperatures);
