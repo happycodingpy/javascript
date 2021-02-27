@@ -42,6 +42,7 @@ const restaurant = {
 };
 const od = restaurant.orderDelivery();
 console.log(od);
+
 // restaurant.orderDelivery({
 //   time: '22:30',
 //   address: 'Via del Sole, 21',
@@ -86,6 +87,29 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+
+const arr = [3, 4, 5];
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+const arr1 = [1, 2, 3];
+const newArr1 = [...arr1];
+console.log(newArr1);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
+console.log(newMenu);
+
+const num = [1, 2, 3];
+const num1 = [...num, 4, 5, 6, 7, 8];
+console.log(num1);
+
+const countries = ['Argentina', 'Paraguay', 'Uruguay'];
+const countries1 = [...countries, 'Chile', 'Brasil', 'Mexico'];
+console.log(countries1);
+
+const ciudades = ['Asunción', 'Santiago', 'Brasilia'];
+const ciudades1 = [...ciudades, 'Montevideo', 'Buenos Aires'];
+console.log(ciudades1);
 
 // Receive 2 return values from a function
 // const a = restaurant.order(0, 0);
