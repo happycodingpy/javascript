@@ -31,17 +31,23 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery: function (starterIndex, mainIndex, time, address) {
+  orderDelivery: function (
+    starterIndex = 1,
+    mainIndex = 2,
+    time = '22:30',
+    address = 'Via del Sole, 21'
+  ) {
     return `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
   },
 };
-
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 1,
-});
+const od = restaurant.orderDelivery();
+console.log(od);
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 1,
+// });
 
 // Desestructurar objetos
 const { nameR, openingHours, categories } = restaurant;
