@@ -111,6 +111,16 @@ const ciudades = ['Asunción', 'Santiago', 'Brasilia'];
 const ciudades1 = [...ciudades, 'Montevideo', 'Buenos Aires'];
 console.log(ciudades1);
 
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+// Join 2 arrays
+const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu1);
+
+// Iterables: arrays, strings, maps, sets but NOT objects
+
 // Receive 2 return values from a function
 // const a = restaurant.order(0, 0);
 // console.log(a);
