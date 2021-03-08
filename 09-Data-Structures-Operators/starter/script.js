@@ -39,6 +39,10 @@ const restaurant = {
   ) {
     return `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+  },
 };
 const od = restaurant.orderDelivery();
 console.log(od);
@@ -88,6 +92,7 @@ const {
 } = openingHours;
 console.log(o, c);
 
+// The Spread Operator (...)
 const arr = [3, 4, 5];
 const newArr = [1, 2, ...arr];
 console.log(newArr);
@@ -120,6 +125,107 @@ const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu1);
 
 // Iterables: arrays, strings, maps, sets but NOT objects
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+
+const ingredients = [
+  // prompt('Lets make pasta! Ingredient 1?'),
+  // prompt('Ingredient2?'),
+  // prompt('Ingredient 3?'),
+  'Salsa boloñesa',
+  'Champiñon',
+  'Muzarella',
+];
+console.log(ingredients);
+
+// solution 1
+restaurant.orderPasta[(ingredients[0], ingredients[1], ingredients[2])];
+
+// solution 2
+restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.nameRc = 'Ristorante Roma';
+console.log(restaurantCopy);
+console.log(restaurantCopy.nameRc);
+console.log(restaurant.nameR);
+
+// 1) Destructuring
+// SPREAD, because on RIGHT side of =
+const arr2 = [1, 2, ...[3, 4, 5]];
+console.log(arr2);
+
+// REST, because on LEFT side of =
+const [x, y, ...others] = [1, 2, 3, 4, 5];
+console.log(x, y, others);
+
+const [pizza, risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, ...otherFood);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// 2) Functions
+const add = (...n) => {
+  console.log(n);
+  let sum1 = (a, b) => a + b;
+  let a = n.reduce(sum1);
+  console.log(`La suma del array es: ${a}`);
+};
+add(5, 3, 7, 2);
+add(5, 2);
+add(7, 3);
+add(5, 5, 5);
+
+const x1 = [5, 15, 10];
+console.log(...x1);
+
+// Use ANY data type, return ANY data type,
+// short-circuiting
+console.log('-----OR-----');
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23);
+
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('-----AND-----');
+console.log(false && 'Jonas');
+console.log(true && 'Jonas');
+console.log('Hello' && 23 && null && 'jonas');
+
+// Practical example
+const a1 = restaurant.orderPizza
+  ? restaurant.orderPizza('mushrooms', 'muzarella')
+  : 'Not there are Pizza';
+console.log(a1);
+
+console.log(
+  restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'muzarella')
+);
+
+// Nullish Coalescing Operator
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+// Nullish: null and undefined
+// const foo = null ?? 'default string';
+// console.log(foo);
 
 // Receive 2 return values from a function
 // const a = restaurant.order(0, 0);
