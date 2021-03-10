@@ -5,6 +5,34 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+const weekdays1 = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const openingHours = {
+  [weekdays1[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays1[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays1[5]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+  // thu: {
+  //   open: 12,
+  //   close: 22,
+  // },
+  // fri: {
+  //   open: 11,
+  //   close: 23,
+  // },
+  // sat: {
+  //   open: 0, // Open 24 hours
+  //   close: 24,
+  // },
+};
+
 const restaurant = {
   nameR: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -12,26 +40,31 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  // ES6 enhanced object literals
+  openingHours,
 
-  order: function (starterIndex, mainIndex) {
+  // openingHours: {
+  //   thu: {
+  //     open: 12,
+  //     close: 22,
+  //   },
+  //   fri: {
+  //     open: 11,
+  //     close: 23,
+  //   },
+  //   sat: {
+  //     open: 0, // Open 24 hours
+  //     close: 24,
+  //   },
+  // },
+
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-
-  orderDelivery: function (
+  // order: function (starterIndex, mainIndex) {
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
+  orderDelivery(
     starterIndex = 1,
     mainIndex = 2,
     time = '22:30',
@@ -39,13 +72,65 @@ const restaurant = {
   ) {
     return `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
   },
-
-  orderPasta: function (ing1, ing2, ing3) {
+  // orderDelivery: function (
+  //   starterIndex = 1,
+  //   mainIndex = 2,
+  //   time = '22:30',
+  //   address = 'Via del Sole, 21'
+  // ) {
+  //   return `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
+  // },
+  orderPasta(ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
   },
+  orderPizza(mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients);
+    console.log(otherIngredients);
+  },
+  // orderPasta: function (ing1, ing2, ing3) {
+  //   console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+  // },
+  // orderPizza: function (mainIngredients, ...otherIngredients) {
+  //   console.log(mainIngredients);
+  //   console.log(otherIngredients);
+  // },
 };
-const od = restaurant.orderDelivery();
-console.log(od);
+
+// Optional Chaining
+console.log('Optional Chaining');
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// WITH optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day} we open at ${open}`);
+}
+
+// Methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Arrays
+const users = [{ myName: 'Jonas', country: 'USA' }];
+console.log(users[0]?.myName ?? 'User array empty');
+
+if (users.length > 0) console.log(users[0]?.myName);
+else console.log('User array empty');
+
+// Looping Array - For-or loop
+console.log('---For-or Loop---');
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu) console.log(`Item of menu: ${item}`);
+for (const item of menu.entries()) console.log(item);
+console.log([...menu.entries()]);
+// const od = restaurant.orderDelivery();
+// console.log(od);
 
 // restaurant.orderDelivery({
 //   time: '22:30',
@@ -55,8 +140,8 @@ console.log(od);
 // });
 
 // Desestructurar objetos
-const { nameR, openingHours, categories } = restaurant;
-console.log(nameR, openingHours, categories);
+// const { nameR, openingHours, categories } = restaurant;
+// console.log(nameR, openingHours, categories);
 // const a = ['🙈', '🙉', '🙊', '🐒', '🙈'];
 // const b = a.filter(i => i === '🙈');
 
@@ -70,8 +155,8 @@ const {
 console.log(restaurantName, hours, tags);
 
 // Default values
-const { menu = [], starterMenu: startes = [] } = restaurant;
-console.log(menu, startes);
+// const { menu = [], starterMenu: startes = [] } = restaurant;
+// console.log(menu, startes);
 
 // Mutating variables
 let a = 111;
@@ -87,10 +172,10 @@ console.log(a, b);
 // console.log(open, close);
 //console.log(fri);
 
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c);
 
 // The Spread Operator (...)
 const arr = [3, 4, 5];
@@ -211,14 +296,14 @@ console.log(true && 'Jonas');
 console.log('Hello' && 23 && null && 'jonas');
 
 // Practical example
-const a1 = restaurant.orderPizza
-  ? restaurant.orderPizza('mushrooms', 'muzarella')
-  : 'Not there are Pizza';
-console.log(a1);
+// const a1 = restaurant.orderPizza
+//   ? restaurant.orderPizza('mushrooms', 'muzarella')
+//   : 'Not there are Pizza';
+// console.log(a1);
 
-console.log(
-  restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'muzarella')
-);
+// console.log(
+//   restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'muzarella')
+// );
 
 // Nullish Coalescing Operator
 // const guestCorrect = restaurant.numGuests ?? 10;
