@@ -95,8 +95,98 @@ const restaurant = {
   //   console.log(otherIngredients);
   // },
 };
+// Maps son más utiles que los Set
+// En Js un mapa es una estructura de datos que asigna valores a claves
+// En los mapas las claves pueden ser de cualquier tipo
+console.log('---Map---');
+const rest = new Map();
+rest.set('name', 'El Banchero');
+console.log(rest);
+rest.set(1, 'La Tarantella');
+console.log(rest.set(2, 'Buenos Aires, Argentina'));
+console.log(rest.set(3, 'Asuncion, Paraguay'));
+console.log(rest.set(4, 'Texas, USA'));
+
+rest
+  .set('categories', ['Paraguayan Food', 'Italian', 'Pizzeria', 'Vegetarian'])
+  .set('open', '11')
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are close :(');
+// para leer un mapa se pasa el valor de la clave
+console.log(rest.get('categories'));
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// Set es un conjunto de valores unicos y no puede tener duplicados
+// Un Set es iterable y también es muy diferente a un array ya que son valores unicos y el orden de los elementos es irrelevante
+console.log('---Set---');
+const comida = ['Pasta', 'Pizza', 'Hamburguesa', 'Milanesa', 'Asadito'];
+const ordersSet = new Set(comida);
+console.log(ordersSet);
+console.log(ordersSet.size);
+console.log(ordersSet.has('Mbeju'));
+// add elements
+ordersSet.add('Vori Vori');
+// remove elements
+ordersSet.delete('Pasta');
+console.log(ordersSet);
+const arrMap = [1, 2];
+console.log(arrMap, 'Test');
+console.log(rest.get(arrMap));
+
+const question = new Map([
+  ['question', 'Who I am?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Python'],
+  [4, 'Javascript'],
+]);
+// console.log(questions);
+
+// Convert object to map
+console.log('---Convert object to map---');
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+// Quiz app
+console.log('---Quiz app---');
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+// Convert map to array
+console.log('--Convert map to array---');
+console.log([...question]);
+console.log(question.entries());
+console.log(...question.keys());
+console.log(question.values());
+
+for (const order of ordersSet) console.log(order);
+
+const staff = [
+  'Waiter',
+  'Chef',
+  'Manager',
+  'Chef',
+  'Waiter',
+  'Chef',
+  'Manager',
+  'Chef',
+];
+console.log('---Staff Unique---');
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(new Set(staff).size);
+
+console.log(new Set('jonasschmedtmann').size);
 
 // Property Names
+console.log('---Property Names---');
 const properties = Object.keys(openingHours);
 console.log(properties);
 let openStr = `We are open on ${properties.length} days: `;
@@ -106,21 +196,24 @@ for (const day1 of properties) {
 }
 console.log(openStr);
 
-// Porperty Values
+// Property Values
+console.log('---Property Values---');
 const values = Object.values(openingHours);
 console.log(values);
 
 // Entrie object
+console.log('---Entries Object---');
 const entries = Object.entries(openingHours);
 console.log(entries);
 
 // [key, value]
+console.log('---[key, value]---');
 for (const [day1, { open, close }] of entries) {
   console.log(`On ${day1} we open at ${open} and close at ${close}`);
 }
 
 // Optional Chaining
-console.log('Optional Chaining');
+console.log('---Optional Chaining---');
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
