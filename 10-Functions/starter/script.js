@@ -106,7 +106,7 @@ lufthansa.book(735, 'Martha Schmedtmann');
 console.log(lufthansa);
 
 const eurowings = {
-  name: 'Eurowings',
+  airline: 'Eurowings',
   iataCode: 'EW',
   bookings: [],
 };
@@ -115,3 +115,34 @@ const book = lufthansa.book;
 book.call(eurowings, 23, 'Sarah Williams');
 book.call(eurowings, 595, 'Mishlé Williams');
 console.log(eurowings);
+
+const latam = {
+  airline: 'Latam Airlines',
+  iataCode: 'LTM',
+  bookings: [],
+};
+
+// Call methods
+console.log('---Call methods---');
+book.call(latam, 25, 'George Martinez');
+book.call(latam, 35, 'Emmanuel Auguste');
+console.log(latam);
+
+// Apply method
+console.log('---Apply method---');
+const flightData = [583, 'George Cooper'];
+book.apply(latam, flightData);
+console.log(latam);
+
+book.call(latam, ...flightData);
+
+//  Bind method
+console.log('---Bind method---');
+const bookEW = book.bind(latam);
+const bookLH = book.bind(lufthansa);
+const bookLK = book.bind(eurowings);
+bookEW(23, 'Steven Williams');
+bookLH(25, 'Carmelo Peralta');
+bookLK(25, 'Wokitoki Gonzalez');
+
+//const bookLH;
