@@ -152,7 +152,7 @@ let age = 23;
 let firstName = 'Jonas';
 ```
 
-**Boolean** tipo lógico que solo puede ser verdadero o falso Se usa para tomar decisiones
+**Boolean** tipo lógico que solo puede ser verdadero o falso y se usa para tomar decisiones
 
 ```javascript
 let yes = true;
@@ -177,8 +177,74 @@ let country = null;
 
 ### Booleanos
 
-tipo lógico que solo puede ser true o false Se usa para tomar decisiones
+Tipo lógico que solo puede ser true o false y se usa para tomar decisiones
 
 ![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_7.png)
 
 ![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_8.png)
+
+### Valores de verdaderos y falsos
+
+```javascript
+// Valores falsos: 0, '', undefined, null, NaN
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(null)); // false
+console.log(Boolean(NaN)); // false
+console.log(Boolean('')); // false
+console.log(Boolean('Jonas')); // true
+console.log(Boolean({})); // true
+```
+
+### Conversion de tipos
+
+```javascript
+// type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+```
+
+El operador de comparacion (==) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (===), es que este convierte y compara operandos que son de diferentes tipos.
+
+### Comparación (==)
+
+```javascript
+console.log(1 == 1);
+// expected output: true
+
+console.log('hello' == 'hello');
+// expected output: true
+
+console.log('1' == 1);
+// expected output: true
+
+console.log(0 == false);
+// expected output: true
+
+console.log('' == false);
+// expected output: true
+```
+
+### Igualdad Estricta (===)
+
+El operador de estricta igualdad (===) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.
+
+```javascript
+console.log(1 === 1);
+// expected output: true
+
+console.log('hello' === 'hello');
+// expected output: true
+
+console.log('1' === 1);
+// expected output: false
+
+console.log(0 === false);
+// expected output: false
+```
