@@ -101,6 +101,9 @@ Un valor es básicamente la unidad más pequeña de información que tenemos en 
 ```javascript
 let js = 'Amazing';
 let firstName = 'Jonas';
+
+console.log(js);
+console.log(firstName);
 ```
 
 Las variables se encargan de guardar los valores (datos, informacion)
