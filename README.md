@@ -4,4 +4,6 @@
 
 ### Configuracion del Editor de Código
 
-**Descarga:** [vscode](https://code.visualstudio.com/)
+Utilizaremos VSCode para trabajar con nuestro códio
+
+**VSCode** [Visual Studio Code](https://code.visualstudio.com/)
