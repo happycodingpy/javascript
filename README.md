@@ -69,3 +69,7 @@ Se trata básicamente de herramientas que hacen que escribir aplicaciones web mo
 Ahora, lo que importa aquí es que todos estos frameworks y bibliotecas todavía se basan en un 100 por ciento en JavaScript.
 
 Y lo que esto significa es que debe volverse realmente bueno en JavaScript antes de aprender y usar cualquiera de estos marcos y no simplemente saltar a su primera librería como React después de saber cómo escribir 10 líneas de código en JS
+
+### Lanzamientos de JavaScript
+
+![js](https://github.com/hugoorlando/javascript/blob/main/img/js_5.png)
