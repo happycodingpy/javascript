@@ -36,5 +36,6 @@ const BMImark = massMark / heightMark ** 2;
 const BMIjohn = massJohn / (heightJohn * heightJohn);
 const markHigherBMI = BMImark > BMIjohn;
 
-console.log(BMImark, BMIjohn, markHigherBMI );
-
+console.log(
+  `BMI Mark: ${BMImark}, BMI John: ${BMIjohn}, Mark Higher BMI: ${markHigherBMI} `
+);
