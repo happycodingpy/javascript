@@ -26,7 +26,7 @@ if (js === 'amazing') console.log('JavaScript is FUN!');
 
 Podemos definir JavaScript de muchas formas diferentes, pero mi definición es que es un lenguaje de programación de alto nivel, orientado a objetos y de múltiples paradigmas.
 
-¿Qué significa realmente todo eso?
+### ¿Qué significa realmente todo eso?
 
 Así que deconstruyamos esto solo un poco para al menos darle algún sentido.
 
