@@ -107,3 +107,9 @@ console.log(firstName);
 ```
 
 Las variables se encargan de guardar los valores (datos, informacion)
+
+```javascript
+let userName = 'Jonas';
+let ebook = 'Around the world';
+console.log(`${userName} is reading the ebook ${ebook}`);
+```
