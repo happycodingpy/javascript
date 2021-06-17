@@ -178,18 +178,14 @@ let country = null;
 ### let, const y var
 
 ```javascript
-let age = 30;
-age = 31;
+let firstName = 'Jonas';
+let lastName = 'Schmedtmann';
+console.log(`${firstName} ${lastName}`);
 
-const birthYear = 1991;
-// birthYear = 1990;
-// const job;
+const API = 'https://api.test.com/number?a=5';
+const country = 'Argentina';
 
-var job = 'programmer';
-job = 'teacher';
-
-lastName = 'Schmedtmann';
-console.log(lastName);
+var city = 'Buenos Aires';
 ```
 
 ### Operadores básicos
