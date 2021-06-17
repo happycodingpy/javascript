@@ -1,9 +1,7 @@
-# Course Material and FAQ for my Complete JavaScript Course
+# JavaScript
 
-This repo contains starter files and final code for all sections and projects contained in the course.
+![javascript](https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor)
 
-### Proyects
+### Configuracion del Editor de Código
 
-[Guess my number](https://happycoding-guessmynumber.vercel.app/)
-
-[Pig Game](https://happycodingpy-pig-game.vercel.app/)
+**Descarga:** [vscode](https://code.visualstudio.com/)
