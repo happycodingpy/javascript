@@ -342,7 +342,7 @@ console.log(0 === false);
 
 ### Booleanos
 
-Tipo lógico que solo puede ser true o false y se usa para tomar decisiones
+Tipo lógico que solo puede ser `true` o `false` y se usa para tomar decisiones
 
 ![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_7.png)
 
