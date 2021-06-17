@@ -8,7 +8,7 @@ Utilizaremos VSCode para trabajar con nuestro código
 
 [Visual Studio Code](https://code.visualstudio.com/)
 
-### Fundamentos Parte 1
+## Fundamentos Parte 1
 
 ```javascript
 console.log('Hello World!');
@@ -55,3 +55,17 @@ Y estos diferentes estilos son solo diferentes formas de estructurar nuestro có
 ### Ejemplo de efectos dinámicos en una app web
 
 ![js](https://github.com/hugoorlando/javascript/blob/main/img/js_3.png)
+
+Entonces, como ya sabe, JavaScript nos permite agregar efectos dinámicos a las páginas y, de hecho, construir aplicaciones web completas en el navegador.
+
+Y estas aplicaciones se sienten casi como las aplicaciones que usamos en nuestras computadoras y teléfonos todos los días. Entonces, podemos decir que JavaScript es lo que hizo posible el desarrollo web moderno y, en primer lugar, toda la web moderna.
+
+### Frameworks y Librerias de JavaScript
+
+![js](https://github.com/hugoorlando/javascript/blob/main/img/js_4.png)
+
+Se trata básicamente de herramientas que hacen que escribir aplicaciones web modernas a gran escala sea mucho más fácil y rápido.
+
+Ahora, lo que importa aquí es que todos estos frameworks y bibliotecas todavía se basan en un 100 por ciento en JavaScript.
+
+Y lo que esto significa es que debe volverse realmente bueno en JavaScript antes de aprender y usar cualquiera de estos marcos y no simplemente saltar a su primera librería como React después de saber cómo escribir 10 líneas de código en JS
