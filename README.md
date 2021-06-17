@@ -261,7 +261,7 @@ if (birthYear <= 2000) {
 console.log(century);
 ```
 
-### Conversion de tipos
+### Type conversion
 
 ```javascript
 // type conversion
