@@ -73,3 +73,34 @@ Y lo que esto significa es que debe volverse realmente bueno en JavaScript antes
 ### Lanzamientos de JavaScript
 
 ![js](https://github.com/hugoorlando/javascript/blob/main/img/js_5.png)
+
+### Valores y variables
+
+Un **valor** es un dato, por ejemplo el texto Jonas es un valor
+
+```javascript
+'Jonas';
+```
+
+Para verlo en la consola
+
+```javascript
+console.log('Jonas');
+```
+
+Podemos tener diferentes valores
+
+```javascript
+console.log('Jonas');
+console.log(23);
+console.log(true);
+```
+
+Un valor es básicamente la unidad más pequeña de información que tenemos en JavaScript y lo podemos guardar en variables
+
+```javascript
+let js = 'Amazing';
+let firstName = 'Jonas';
+```
+
+Las variables se encargan de guardar los valores (datos, informacion)
