@@ -210,9 +210,9 @@ console.log(typeof NaN);
 console.log(String(23), 23);
 ```
 
-El operador de comparacion (==) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (===), es que este convierte y compara operandos que son de diferentes tipos.
-
 ### Comparación (==)
+
+El operador de comparacion (==) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (===), es que este convierte y compara operandos que son de diferentes tipos.
 
 ```javascript
 console.log(1 == 1);
