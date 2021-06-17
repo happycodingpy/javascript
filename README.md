@@ -6,7 +6,7 @@
 
 Utilizaremos VSCode para trabajar con nuestro código
 
-**VSCode** [Visual Studio Code](https://code.visualstudio.com/)
+[Visual Studio Code](https://code.visualstudio.com/)
 
 ### Fundamentos Parte 1
 
