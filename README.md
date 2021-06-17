@@ -248,3 +248,7 @@ console.log('1' === 1);
 console.log(0 === false);
 // expected output: false
 ```
+
+### Breve historia de JavaScript
+
+![ECMAScript](https://github.com/hugoorlando/javascript/blob/main/img/js_9.png)
