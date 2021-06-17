@@ -175,25 +175,90 @@ let country = null;
 
 **BigInt** enteros más grandes que los que puede contener el tipo Número
 
-### Booleanos
-
-Tipo lógico que solo puede ser true o false y se usa para tomar decisiones
-
-![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_7.png)
-
-![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_8.png)
-
-### Valores de verdaderos y falsos
+### let, const y var
 
 ```javascript
-// Valores falsos: 0, '', undefined, null, NaN
-console.log(Boolean(0)); // false
-console.log(Boolean(undefined)); // false
-console.log(Boolean(null)); // false
-console.log(Boolean(NaN)); // false
-console.log(Boolean('')); // false
-console.log(Boolean('Jonas')); // true
-console.log(Boolean({})); // true
+let age = 30;
+age = 31;
+
+const birthYear = 1991;
+// birthYear = 1990;
+// const job;
+
+var job = 'programmer';
+job = 'teacher';
+
+lastName = 'Schmedtmann';
+console.log(lastName);
+```
+
+### Operadores básicos
+
+```javascript
+// Operadores matemáticos (+,-,*,/,**)
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+```
+
+### Operadores de asignacion
+
+```javascript
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1
+x--;
+x--;
+```
+
+### Operadores de comparacion
+
+```javascript
+console.log(ageJonas > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
+```
+
+### String y Template Literals
+
+```javascript
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+```
+
+### If-Else
+
+```javascript
+const age = 15;
+
+if (age >= 18) {
+  console.log('Sarah can start driving license 🚗');
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 2012;
+
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
 ```
 
 ### Conversion de tipos
@@ -208,6 +273,32 @@ console.log(Number('Jonas'));
 console.log(typeof NaN);
 
 console.log(String(23), 23);
+```
+
+### Type coercion
+
+```javascript
+console.log('I am ' + 23 + ' years old');
+console.log('23' - '10' - 3);
+console.log('23' / '2');
+console.log('23' > '18');
+
+let n = '1' + 1; // '11'
+n = n - 1;
+console.log(n);
+```
+
+### Truthy and Falsy Values
+
+```javascript
+// Valores falsos: 0, '', undefined, null, NaN
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(null)); // false
+console.log(Boolean(NaN)); // false
+console.log(Boolean('')); // false
+console.log(Boolean('Jonas')); // true
+console.log(Boolean({})); // true
 ```
 
 ### Comparación (==)
@@ -247,6 +338,34 @@ console.log('1' === 1);
 
 console.log(0 === false);
 // expected output: false
+```
+
+### Booleanos
+
+Tipo lógico que solo puede ser true o false y se usa para tomar decisiones
+
+![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_7.png)
+
+![Booleanos](https://github.com/hugoorlando/javascript/blob/main/img/js_8.png)
+
+### Operadores logicos
+
+```javascript
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+```
+
+### Operador ternario
+
+```javascript
+const age = 23;
+
+const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+console.log(drink);
 ```
 
 ### Breve historia de JavaScript
