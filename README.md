@@ -20,6 +20,8 @@ let js = 'amazing';
 if (js === 'amazing') console.log('JavaScript is FUN!');
 ```
 
+## Breve intro a JavaScript
+
 ### ¿Qué es JavaScript y qué podemos hacer con él?
 
 ![js](https://github.com/hugoorlando/javascript/blob/main/img/js_1.png)
@@ -44,8 +46,12 @@ Y estos diferentes estilos son solo diferentes formas de estructurar nuestro có
 
 ![js](https://github.com/hugoorlando/javascript/blob/main/img/js_2.png)
 
-**HTML** es el responsable del contenido de la pagina. Titulos, parrafos, imagenes, etc
+**HTML** es el responsable del contenido de la pagina como los titulos, parrafos, imágenes, etc
 
 **CSS** se encarga de darle estilos a nuestra página web como colores, efectos, etc
 
-**JavaScript** es el lenguaje de programación que se encarga de agregar efectos dinámicos e interactivos a cualquier página web
+**JavaScript** es el lenguaje de programación que se encarga de agregar efectos dinámicos e interactivos a cualquier página web. También es utilizado para manipular el contenido de los datos desde servidores remotos y construir aplicaciones web
+
+### Ejemplo de efectos dinámicos en una app web
+
+![js](https://github.com/hugoorlando/javascript/blob/main/img/js_3.png)
