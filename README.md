@@ -22,6 +22,8 @@ if (js === 'amazing') console.log('JavaScript is FUN!');
 
 ### ¿Qué es JavaScript y qué podemos hacer con él?
 
+![js](https://github.com/hugoorlando/javascript/blob/main/img/js_1.png)
+
 Podemos definir JavaScript de muchas formas diferentes, pero mi definición es que es un lenguaje de programación de alto nivel, orientado a objetos y de múltiples paradigmas.
 
 ¿Qué significa realmente todo eso?
