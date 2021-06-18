@@ -20,8 +20,6 @@ let js = 'amazing';
 if (js === 'amazing') console.log('JavaScript is FUN!');
 ```
 
-## Breve intro a JavaScript
-
 ### ¿Qué es JavaScript y qué podemos hacer con él?
 
 ![js](https://github.com/hugoorlando/javascript/blob/main/img/js_1.png)
@@ -367,3 +365,82 @@ console.log(drink);
 ### Breve historia de JavaScript
 
 ![ECMAScript](https://github.com/hugoorlando/javascript/blob/main/img/js_9.png)
+
+## Fundamentos Parte 2
+
+### Activating Strict Mode
+
+Modo estricto para scripts
+
+Para invocar el modo estricto en todo un script, escribe exactamente "use strict"; (o 'use strict';) antes de cualquier otra expresión. El modo estricto permite escribir un código más seguro y evitar errores accidentales, ya que evita que introduzcamos errores en nuestro código
+
+```javascript
+// Sintaxis del modo estricto para todo el script
+'use strict';
+
+let v = '¡Hola! ¡Estoy en modo estricto para script!';
+
+let hasDriversLicense = false;
+const passTest = true;
+
+// ReferenceError: hasDriverLicense is not defined
+// if (passTest) hasDriverLicense = true;
+
+// SyntaxError: Unexpected strict mode reserved word
+// const interface = 'Audio';
+```
+
+### Funciones
+
+Las funciones es simplemente un fragmento de código que podemos reutilizar una y otra vez en nuestro código
+
+```javascript
+function logger() {
+  console.log('My name is Jonas');
+}
+```
+
+Todo lo que se encuentra dentro de las llaves `{}` se llama cuerpo de la funcion
+
+Para utilizar la funcion simplement escribimos el nombre de la funcion `logger()` y con ella llamamos a la funcion para ejecutarla
+
+```javascript
+function logger() {
+  console.log('My name is Jonas');
+}
+
+logger();
+```
+
+Cuando escribimos una funcion le pasamos informacion y también la funcion puede devolver o retornar esa información o datos.
+
+Las funciones pueden recibir parámetros que son variables específicas para la función y se definen una vez que llamamos a la funcion
+
+```javascript
+function fruitProcessor(fruit) {}
+```
+
+`fruit` es el parámetro que recibe la función fruitProcessor
+
+### Function Declarations vs. Expressions
+
+Las `Function Declarations` se llaman así porque usamos la palabra clave `function` para declarar una función
+
+```javascript
+// Function declaration
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+const age1 = calcAge1(1991);
+console.log(age1);
+```
+
+```javascript
+// Function expression
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(1991);
+
+console.log(age2);
+```
