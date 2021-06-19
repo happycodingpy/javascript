@@ -546,6 +546,51 @@ Los arrays pueden contener tanto valores como queramos y también valores de cua
 const data = [1, 'Mundo', 25, 'Argentina', false, true];
 ```
 
+Tambien de esta forma se puede escribir un Array pero no es muy utilizado
+
+```javascript
+const years = new Array(1991, 1980, 2020, 2021);
+```
+
+Para mostrar el valor del Array en una posicion del mismo hacemos lo siguiente:
+
+```javascript
+const data = [1, 'Mundo', 25, 'Argentina', false, true];
+
+console.log(data[0]); // 1
+console.log(data[3]); // Argentina
+```
+
+Para conocer la longitud o el tamaño del Array
+
+```javascript
+const data = [1, 'Mundo', 25, 'Argentina', false, true];
+
+console.log(data.length);
+```
+
+Para conocer la última posición del Array
+
+```javascript
+const data = [1, 'Mundo', 25, 'Argentina', false, true];
+
+console.log(data[data.length - 1]);
+```
+
+Podemos remplazar un elemento del Array. Por ejemplo: voy a remplazar `Michael` por `Jay`
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends); // Michael, Steven, Peter
+
+friends[0] = 'Jay';
+console.log(friends); // Jay, Steven, Peter
+```
+
+Solo los valores primitivos son inmutables, no se pueden cambiar pero los Array no es un valor primitivo por eso simpre podemos cambiarlo para poder tener distintos y nuevos elementos.
+
+Podemos remplazar los elementos de un Array aunque hayan sido declaradas con un `const`. Lo que no podemos hacer es remplazar el Array completamente.
+
 ## Learning How to Code
 
 ### 💥 ¿Cómo fallar al aprender a codificar?
@@ -621,3 +666,7 @@ copiar pegar
 **Perdió la motivación porque pensó que nunca lo sabría todo**
 
 El mayor error que tiene la gente! Los cursos son increíbles punto de partida, pero son solo el comienzo de su viaje
+
+```
+
+```
