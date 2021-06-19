@@ -587,3 +587,23 @@ necesita y luego aprende
 
 🚀 Escriba siempre el código, no
 copiar pegar
+
+**No reforzó lo que estaba aprendiendo haciendo pequeños desafíos o tomando notas**
+
+🚀 Después de aprender una nueva característica o concepto, úselo inmediatamente
+
+🚀 Tomar notas
+
+🚀 Ponte a prueba y practicar con codificación pequeña ejercicios y retos
+
+🚀 No tenga prisa por completa el curso rápido
+
+**No practicaba la codificación y no se le ocurrían sus propias ideas de proyectos.**
+
+🚀 Practicar por tu cuenta es el lo más importante que hacer
+
+🚀 ¡Esto NO es opcional! Sin practicar fuera de los cursos, ¡no irás a ningún lado!
+
+🚀 Crea tu propia ideas de proyectos o copias populares sitios o aplicaciones, o simplemente partes de ellos al principio
+
+🚀 No te quedes atrapado en el "infierno del tutorial"
