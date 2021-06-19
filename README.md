@@ -494,4 +494,56 @@ console.log(fruitProcessor(2, 3));
 
 ### Repasando las funciones
 
-![functions](https://github.com/hugoorlando/javascript/blob/main/img/js_10.png)
+![function](https://github.com/hugoorlando/javascript/blob/main/img/js_10.png)
+
+### Los tres diferentes tipos de funciones
+
+**Function Declaration:** Función que puede ser
+utilizado antes de que se declare
+
+```javascript
+function salular(nombre) {
+  return `Hola ${nombre}`;
+}
+```
+
+**Function Expression:** Esencialmente una función valor almacenado en una variable
+
+```javascript
+const saludar = function (nombre) {
+  return `Hola ${nombre}`;
+};
+```
+
+**Arrow Function**
+
+```javascript
+const saludar = nombre => `Hola ${nombre}`;
+```
+
+![functions](https://github.com/hugoorlando/javascript/blob/main/img/js_11.png)
+
+Tres formas diferentes de escribir funciones, pero todas funcionan en una manera similar: `recibe datos de entrada, transforma los datos y luego retorna esos mismos datos`
+
+### Anatomia de una Function
+
+![functions](https://github.com/hugoorlando/javascript/blob/main/img/js_12.png)
+
+### ¿Cómo fallar al aprender a codificar?
+
+💥 No tenía un objetivo claro al comienzo de su viaje.
+
+💥 Empezó viendo cursos y leyendo tutoriales, pero simplemente copiaba el código sin importar cómo funciona. ¡A veces simplemente copiaba y pegaba el código!
+
+💥 No reforzó lo que estaba aprendiendo haciendo pequeños desafíos o tomando notas
+
+💥 No practicó la codificación y no se le ocurrieron sus propias ideas de proyectos.
+
+💥 Rápidamente se sintió frustrado cuando su código no estaba perfectamente limpio o eficiente
+
+💥 Perdió la motivación porque pensó que nunca podría saberlo todo
+
+💥 Estaba aprendiendo de forma aislada
+
+💥 Después de terminar un par de cursos, pensó que ahora era desarrollador web y
+podría comenzar a postularse para trabajos. Pero ni siquiera podía crear una aplicación por su cuenta
