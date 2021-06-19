@@ -607,3 +607,17 @@ copiar pegar
 🚀 Crea tu propia ideas de proyectos o copias populares sitios o aplicaciones, o simplemente partes de ellos al principio
 
 🚀 No te quedes atrapado en el "infierno del tutorial"
+
+**Rápidamente se frustró cuando su código no era perfectamente limpio o eficiente**
+
+🚀 No te quedes atascado tratando de escribir ¡el código perfecto!
+
+🚀 Solo escribe toneladas de código, no importa la calidad!
+
+🚀 Un código limpio y eficiente ven con tiempo
+
+🚀 Siempre puede refactorizar el código mas tarde
+
+**Perdió la motivación porque pensó que nunca lo sabría todo**
+
+El mayor error que tiene la gente! Los cursos son increíbles punto de partida, pero son solo el comienzo de su viaje
