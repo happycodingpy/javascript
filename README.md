@@ -529,7 +529,26 @@ Tres formas diferentes de escribir funciones, pero todas funcionan en una manera
 
 ![functions](https://github.com/hugoorlando/javascript/blob/main/img/js_12.png)
 
-### ¿Cómo fallar al aprender a codificar?
+## Introducción a Arrays
+
+Quiero almacenar los nombres de mis amigos para luego usarlos en una funcion
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+```
+
+Utilizamos estructura de datos para trabajar con matrices `(arrays)` ya que todo el tiempo estamos intercambiando datos y los arrays son una buena forma de trabajar con ellos. En JavaScript existe dos tipos de estructura de datos importantes: `los arrays y los objetos`
+
+Los arrays pueden contener tanto valores como queramos y también valores de cualquier tipo que queramos
+
+```javascript
+const data = [1, 'Mundo', 25, 'Argentina', false, true];
+```
+
+## Learning How to Code
+
+### 💥 ¿Cómo fallar al aprender a codificar?
 
 💥 No tenía un objetivo claro al comienzo de su viaje.
 
@@ -547,3 +566,24 @@ Tres formas diferentes de escribir funciones, pero todas funcionan en una manera
 
 💥 Después de terminar un par de cursos, pensó que ahora era desarrollador web y
 podría comenzar a postularse para trabajos. Pero ni siquiera podía crear una aplicación por su cuenta
+
+### 🚀 ¿Cómo tener éxito al aprender a codificar?
+
+**No tenía un objetivo claro en el comienzo de su viaje**
+
+🚀 Establezca un valor específico, medible meta realista y basada en el tiempo
+
+🚀 Sepa exactamente por qué está
+aprender a codificar: cambiar carreras? ¿Encontrar un trabajo mejor?
+
+🚀 Imagina un gran proyecto que quiero poder construir!
+
+🚀 Investiga las tecnologías que
+necesita y luego aprende
+
+**Él simplemente copiaría el código sin importar cómo funciona. A veces el solo copiar y pegar el código!**
+
+🚀 Entender el código que estás estudiando y escribiendo
+
+🚀 Escriba siempre el código, no
+copiar pegar
