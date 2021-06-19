@@ -591,6 +591,34 @@ Solo los valores primitivos son inmutables, no se pueden cambiar pero los Array 
 
 Podemos remplazar los elementos de un Array aunque hayan sido declaradas con un `const`. Lo que no podemos hacer es remplazar el Array completamente.
 
+JavaScript tiene algunas funciones integradas que básicamente podemos aplicar directamente a los Arrays y estos se denominan métodos y son operaciones de Arrays. Hay innumerables métodos en JavaScript.
+
+**Push** el método `push` agrega elementos al final del Array
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+friends.push('John');
+
+console.log(friends);
+// Michael, Steven, Peter, John
+```
+
+**Unshift** el método `unshift` agrega elementos al principio del Array
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+friends.unshift('Jay');
+console.log(friends);
+```
+
+**Pop** el método `pop()` remueve el último elemento de un Array
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+friends.pop();
+console.log(friends);
+```
+
 ## Learning How to Code
 
 ### 💥 ¿Cómo fallar al aprender a codificar?
