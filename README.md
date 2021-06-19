@@ -593,7 +593,7 @@ Podemos remplazar los elementos de un Array aunque hayan sido declaradas con un 
 
 JavaScript tiene algunas funciones integradas que básicamente podemos aplicar directamente a los Arrays y estos se denominan métodos y son operaciones de Arrays. Hay innumerables métodos en JavaScript.
 
-**Push** el método `push` agrega elementos al final del Array
+**Push** el método `push()` agrega elementos al final del Array
 
 ```javascript
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -603,7 +603,7 @@ console.log(friends);
 // Michael, Steven, Peter, John
 ```
 
-**Unshift** el método `unshift` agrega elementos al principio del Array
+**Unshift** el método `unshift()` agrega elementos al principio del Array
 
 ```javascript
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -615,8 +615,31 @@ console.log(friends);
 
 ```javascript
 const friends = ['Michael', 'Steven', 'Peter'];
-friends.pop();
-console.log(friends);
+
+console.log(friends.pop());
+```
+
+**Shift** el método `shift()` elimina el primer elemento de un Array
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends.shift());
+```
+
+**indexOf** el método `indexOf()` nos dice en qué posición se encuentra un determinado elemento en un Array. Se escribe el método y se le pasa el elemento que necesitamos y devuelve el índice de ese elemento
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends.indexOf('Steven'));
+```
+
+**includes()** el método `includes()` retornara `true`si el elemento está incluido en el Array y `false` si no lo está
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+
+console.log(friends.includes('Steven')); // true
+console.log(friends.includes('Bob')); // false
 ```
 
 ## Learning How to Code
