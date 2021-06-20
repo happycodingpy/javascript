@@ -930,6 +930,12 @@ Por ejemplo: podemos cambiar texto, cambiar atributos HTML y también podemos ca
 
 ![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_14.png)
 
-Los métodos del DOM y las propiedas para manipular el DOM no son parte de JavaScript, ya que JS es simplemente un lenguaje de programación y el DOM no se encuentra dentro de la especificación ECMAScript
+Los métodos del DOM y las propiedas para manipular el DOM no son parte de JavaScript, ya que JS es simplemente un lenguaje de programación y el DOM no se encuentra dentro de la especificación ECMAScript.
+
+El DOM y sus métodos son parte de algo llamado API Web.
+
+Las Web APIs son librerías que implementan los navegadores y a las que podemos acceder desde nuestro código JavaScript
+
+**API** significa `Interfaz de Programación de Aplicaciones`. Las Web APIs están escritas en JavaScript y están disponibles automáticamente para que las utilicemos.
 
 ![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_15.png)
