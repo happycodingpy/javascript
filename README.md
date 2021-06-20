@@ -919,3 +919,15 @@ Bueno, en este caso, probablemente siempre deberíamos devolver exactamente el m
 Estas son solo algunas de las preguntas que podemos hacer aquí.
 
 Estoy seguro de que hay más, pero esto ya debería darnos una imagen mucho más clara de este problema.
+
+### JavaScript en el Browser: DOM y Eventos
+
+El DOM es la representación estructurada de documentos en HTML. Permite a JavaScript acceder a los elementos HTML y estilos para manipularlos
+
+```javascript
+const message = document.querySelector('.message');
+```
+
+![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_13.png)
+
+![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_14.png)
