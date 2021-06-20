@@ -642,6 +642,176 @@ console.log(friends.includes('Steven')); // true
 console.log(friends.includes('Bob')); // false
 ```
 
+Con el método `includes()` podemos escribir condicionales
+
+```javascript
+const friends = ['Michael', 'Steven', 'Peter'];
+
+if (friends.includes('Steven')) {
+  console.log('You have a friend called Steven');
+}
+```
+
+### Intro a los Objetos
+
+Aprenderemos sobre otra Estructura de Datos llamada Objetos
+
+```javascript
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+};
+```
+
+Podemos obtener el valor de los elementos del Objeto de dos formas: con un `.` y con `[]`
+
+```javascript
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+};
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+```
+
+### Metodo de los Objetos
+
+Los objetos al igual que los arrays pueden contener diferentes tipos de datos y pueden tener inlcuso arrays además de objetos dentro de objetos.
+
+```javascript
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+
+  // Object Methods
+  calcAge: function (birthYear) {
+    return 2037 - this.birthYear;
+  },
+};
+console.log(jonas.calcAge(1991));
+```
+
+### Iteration: The for Loop
+
+```javascript
+// console.log('Lifting weights repetition 1 🏋️‍♀️');
+// console.log('Lifting weights repetition 2 🏋️‍♀️');
+// console.log('Lifting weights repetition 3 🏋️‍♀️');
+// console.log('Lifting weights repetition 4 🏋️‍♀️');
+// console.log('Lifting weights repetition 5 🏋️‍♀️');
+// console.log('Lifting weights repetition 6 🏋️‍♀️');
+// console.log('Lifting weights repetition 7 🏋️‍♀️');
+// console.log('Lifting weights repetition 8 🏋️‍♀️');
+// console.log('Lifting weights repetition 9 🏋️‍♀️');
+// console.log('Lifting weights repetition 10 🏋️‍♀️');
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+```
+
+### Looping Arrays, Breaking and Continuing
+
+```javascript
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true,
+];
+const types = [];
+
+// console.log(jonas[0])
+// console.log(jonas[1])
+// ...
+// console.log(jonas[4])
+// jonas[5] does NOT exist
+
+for (let i = 0; i < jonas.length; i++) {
+  // Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+```
+
+### Looping Backwards and Loops in Loops
+
+```javascript
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true,
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+  }
+}
+```
+
+### The while Loop
+
+```javascript
+for (let rep = 1; rep <= 10; rep++) {
+console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+// console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
+rep++;
+}
+
+let dice = Math.trunc(Math.random() \* 6) + 1;
+
+while (dice !== 6) {
+console.log(`You rolled a ${dice}`);
+dice = Math.trunc(Math.random() \* 6) + 1;
+
+if (dice === 6) console.log('Loop is about to end...');
+}
+```
+
 ## Learning How to Code
 
 ### 💥 ¿Cómo fallar al aprender a codificar?
@@ -718,6 +888,34 @@ copiar pegar
 
 El mayor error que tiene la gente! Los cursos son increíbles punto de partida, pero son solo el comienzo de su viaje
 
-```
+### Conviertase en un solucionador de problemas
 
-```
+Asegurarse de que comprende al 100 por ciento el problema, retroceda y observe el panorama general de alto nivel. Y la parte más importante del paso es hacer las preguntas correctas para tener una idea clara de todo el problema.
+
+Y la mejor manera de entender esto es probablemente mirar un ejemplo juntos aquí.
+
+Entonces, digamos que está trabajando en alguna empresa en algún proyecto, y luego su gerente de proyecto viene y le dice que necesitamos una función que invierta todo lo que le pasamos. Y eso es todo, ya conoces el problema.
+
+¿Pero lo entiendes al cien por cien?
+
+Bueno, probablemente no, ¿verdad?
+
+Yo se que no lo hago.
+
+Así que hagamos las preguntas correctas para llegar allí.
+
+Primero, podemos preguntarnos, ¿qué significa realmente lo que sea en este contexto?
+
+Entonces, ¿qué debería revertirse aquí?
+
+Bueno, y si lo pensamos bien, solo tiene sentido invertir los números de las cadenas y borrar los objetos que no tienen un orden bien definido, por lo que no podemos revertirlos. Tampoco vamos a revertir, como indefinido, nulo o booleano.
+
+Luego, después de haber resuelto eso, podemos preguntarnos, ¿qué debemos hacer si se pasa algo más que no sea un número de cadena o matriz? ¿Cómo vamos a manejar eso?
+
+También es relevante preguntar qué debe devolverse exactamente de la función, por ejemplo, siempre debe ser una cadena o si el vínculo debe ser el mismo que se pasó.
+
+Bueno, en este caso, probablemente siempre deberíamos devolver exactamente el mismo tipo que se pasó. Además, podemos comenzar a hacer preguntas más orientadas a la solución, ¿cómo reconocer si el argumento es un número, una cadena o una matriz, o cómo invertir realmente una serie de cadenas y una matriz?
+
+Estas son solo algunas de las preguntas que podemos hacer aquí.
+
+Estoy seguro de que hay más, pero esto ya debería darnos una imagen mucho más clara de este problema.
