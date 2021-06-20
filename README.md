@@ -926,10 +926,10 @@ El DOM es la representación estructurada de documentos en HTML. Permite a JavaS
 
 Por ejemplo: podemos cambiar texto, cambiar atributos HTML y también podemos cambiar estilos desde nuestro código de JavScript. Entonces podríamos decir que el DOM es básicamente un punto de conexión entre documentos HMTL y el código JavaScript
 
-```javascript
-const message = document.querySelector('.message');
-```
-
 ![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_13.png)
 
 ![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_14.png)
+
+Los métodos del DOM y las propiedas para manipular el DOM no son parte de JavaScript, ya que JS es simplemente un lenguaje de programación y el DOM no se encuentra dentro de la especificación ECMAScript
+
+![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_15.png)
