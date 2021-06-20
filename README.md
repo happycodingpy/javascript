@@ -922,7 +922,9 @@ Estoy seguro de que hay más, pero esto ya debería darnos una imagen mucho más
 
 ### JavaScript en el Browser: DOM y Eventos
 
-El DOM es la representación estructurada de documentos en HTML. Permite a JavaScript acceder a los elementos HTML y estilos para manipularlos
+El DOM es la representación estructurada de documentos en HTML. Permite a JavaScript acceder a los elementos HTML y estilos para manipularlos.
+
+Por ejemplo: podemos cambiar texto, cambiar atributos HTML y también podemos cambiar estilos desde nuestro código de JavScript. Entonces podríamos decir que el DOM es básicamente un punto de conexión entre documentos HMTL y el código JavaScript
 
 ```javascript
 const message = document.querySelector('.message');
