@@ -6,6 +6,7 @@ const score = document.querySelector('.score');
 const guess = document.querySelector('.guess');
 const checkButton = document.querySelector('.check');
 const againButton = document.querySelector('.again');
+const myHighscore = document.querySelector('.highscore');
 
 const body = document.querySelector('body');
 
@@ -29,19 +30,21 @@ function guessMyNumber() {
     number.textContent = secretNumber;
     body.style.backgroundColor = '#7952B3';
     number.style.width = '30rem';
-  } else if (guessNum > secretNumber) {
+
+    if (myScore > highscore) {
+      highscore = myScore;
+      myHighscore.textContent = highscore;
+    }
+  } else if (guessNum !== secretNumber) {
     if (myScore > 1) {
-      //displayMessage(highAndLow(guessNum, secretNumber));
-      displayMessage('🙊 Too high!');
+      displayMessage(guessSecNum(guessNum, secretNumber));
       myScore--;
-      score.textContent = myScore;
+      displayHighScore(myScore);
     } else {
       displayMessage('🐒 You lost the game!');
       score.textContent = 0;
       body.style.backgroundColor = '#301B3F';
     }
-  } else if (guessNum < secretNumber) {
-    displayMessage('🙊 Too low!');
   }
 }
 
@@ -49,15 +52,18 @@ const displayMessage = msg => {
   message.textContent = msg;
 };
 
-const highAndLow = (guess, secretNumber) => {
+const guessSecNum = (guess, secretNumber) =>
   guess > secretNumber ? '🙊 Very high!' : '🙊 Very low!';
-};
 
 const displayScore = score => {
   score.textContent = myScore;
 };
 
 const hideSecreteNumber = secNum => (number.textContent = secNum);
+
+const displayHighScore = highscore => {
+  myHighscore.textContent = highscore;
+};
 
 function againReset() {
   myScore = 20;
@@ -67,5 +73,6 @@ function againReset() {
   score.textContent = 0;
   guess.value = '';
   displayMessage('Start guessing...');
-  body.style.backgroundColor = '#290149';
+  body.style.backgroundColor = '#161616';
+  number.style.width = '30rem';
 }
