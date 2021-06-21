@@ -17,6 +17,23 @@ let highscore = 0;
 checkButton.addEventListener('click', guessMyNumber);
 againButton.addEventListener('click', againReset);
 
+const displayMessage = msg => {
+  message.textContent = msg;
+};
+
+const guessSecNum = (guess, secretNumber) =>
+  guess > secretNumber ? '🙊 Very high!' : '🙊 Very low!';
+
+const displayScore = score => {
+  score.textContent = myScore;
+};
+
+const hideSecreteNumber = secNum => (number.textContent = secNum);
+
+const displayHighScore = highscore => {
+  myHighscore.textContent = highscore;
+};
+
 function guessMyNumber() {
   const guessNum = Number(guess.value);
 
@@ -47,23 +64,6 @@ function guessMyNumber() {
     }
   }
 }
-
-const displayMessage = msg => {
-  message.textContent = msg;
-};
-
-const guessSecNum = (guess, secretNumber) =>
-  guess > secretNumber ? '🙊 Very high!' : '🙊 Very low!';
-
-const displayScore = score => {
-  score.textContent = myScore;
-};
-
-const hideSecreteNumber = secNum => (number.textContent = secNum);
-
-const displayHighScore = highscore => {
-  myHighscore.textContent = highscore;
-};
 
 function againReset() {
   myScore = 20;
