@@ -24,7 +24,7 @@ const displayMessage = msg => {
 const guessSecNum = (guess, secretNumber) =>
   guess > secretNumber ? '🙊 Very high!' : '🙊 Very low!';
 
-const displayScore = score => {
+const displayScore = myScore => {
   score.textContent = myScore;
 };
 
@@ -50,17 +50,19 @@ function guessMyNumber() {
 
     if (myScore > highscore) {
       highscore = myScore;
-      myHighscore.textContent = highscore;
+      //   myHighscore.textContent = highscore;
+      displayHighScore(highscore);
     }
   } else if (guessNum !== secretNumber) {
     if (myScore > 1) {
       displayMessage(guessSecNum(guessNum, secretNumber));
       myScore--;
-      displayHighScore(myScore);
+      displayScore(myScore);
     } else {
       displayMessage('🐒 You lost the game!');
       score.textContent = 0;
       body.style.backgroundColor = '#301B3F';
+      displayScore(0);
     }
   }
 }
