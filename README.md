@@ -939,3 +939,34 @@ Las Web APIs son librerías que implementan los navegadores y a las que podemos 
 **API** significa `Interfaz de Programación de Aplicaciones`. Las Web APIs están escritas en JavaScript y están disponibles automáticamente para que las utilicemos.
 
 ![dom](https://github.com/hugoorlando/javascript/blob/main/img/js_15.png)
+
+### Data Structures, modern operators and strings
+
+**Destructuring Arrays**
+
+Es una característica de ES6 y es básicamente una forma de descomprimir los valores de un array o un objeto en variables separadas.
+
+La desestructuración consiste en dividir una estructura de datos compleja e una estructura de datos más pequeña una variable.
+
+Para los arrays, usamos esta desestructuración para recuperar elementos de la matraiz y almacenarlos en variables de una manera muy fácil.
+
+Ejemplo:
+
+```javascript
+const paises = ['Arg', 'Brl', 'Py'];
+const [a, b, p] = paises;
+
+console.log(a, b, p);
+```
+
+Declaramos el array
+
+`const paises = ['Arg', 'Brl', 'Py'];`
+
+Creamos dentro de corchetes variables que guarden los valores del array
+
+`const [a, b, p] = paises;`
+
+Mostramos en consola los valores del array
+
+`console.log(a, b, p);`
