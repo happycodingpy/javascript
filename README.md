@@ -1073,20 +1073,4 @@ console.log(a, b, others);
 // 1 2 [ 3, 4, 5 ]
 ```
 
-La sintaxis de los parámetros rest nos permiten representar un número indefinido de argumentos como un array.
-
-```javascript
-function sum(...theArgs) {
-  return theArgs.reduce((previous, current) => {
-    return previous + current;
-  });
-}
-
-console.log(sum(1, 2, 3));
-// expected output: 6
-
-console.log(sum(1, 2, 3, 4));
-// expected output: 10
-```
-
-[rest_parameters](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+### Short circuiting
