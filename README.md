@@ -957,16 +957,136 @@ const paises = ['Arg', 'Brl', 'Py'];
 const [a, b, p] = paises;
 
 console.log(a, b, p);
+// Arg Brl Py
 ```
 
 Declaramos el array
 
 `const paises = ['Arg', 'Brl', 'Py'];`
 
-Creamos dentro de corchetes variables que guarden los valores del array
+Creamos dentro de corchetes variables que guarden los valores de los elementos del array. Esto es la asignación del array
 
 `const [a, b, p] = paises;`
 
 Mostramos en consola los valores del array
 
 `console.log(a, b, p);`
+
+```javascript
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+};
+const [first, second] = restaurant.categories;
+console.log(first, second);
+```
+
+Podemos crear una funcion en nuestro objeto y desestructurar el objeto
+
+```javascript
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  // Funcion que recibe dos parametros (starterIndex, mainIndex)
+  order: function (starterIndex, mainIndex) {
+    // Esta funcion retorna de starterMenu los parametros (starterIndex, mainIndex)
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+};
+// Si quiero sacar el tercer elemento, simplemente agrego una coma
+// Entre el primer elemento y el tercero, para que de esa forma no tome el segundo elemento
+// const [first, , second] = restaurant.categories;
+const [main, secondary] = restaurant.categories;
+console.log(main, secondary);
+
+// Recibe y retorna valores de la function order
+const [starter, mainMenu] = restaurant.order(2, 0);
+console.log(starter, main);
+// Garlic Bread Italian
+```
+
+Para desestructurar objetos utilizamos `{}` porque así es como creamos objetos
+
+```javascript
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  openingHours: {
+    thu: { open: 12, close: 22 },
+    fri: { open: 11, close: 23 },
+    sat: { open: 0, close: 24 },
+  },
+
+  // Funcion que recibe dos parametros (starterIndex, mainIndex)
+  order: function (starterIndex, mainIndex) {
+    // Esta funcion retorna de starterMenu los parametros (starterIndex, mainIndex)
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+};
+
+// Para desestructurar objetos utilizamos {} porque asi es como creamos objetos
+// Los nombres para desestructurar deben ser los mismos nombres que se utilizan en el objeto
+const { name, openingHours, categories } = restaurant;
+console.log(name);
+```
+
+### Spread operator
+
+Utilizamos el `Spread operator` para expandir un array en todos sus elementos
+
+Creamos un array llamado `arr` junto con sus elementos. Luego creamos otro array que contendrá nuevos elementos junto el con el primer array creado utilizando el `spread operator` para expandir el primer array en el nuevo array newArr
+
+```javascript
+const arr = [1, 2, 3];
+const newArr = [...arr, 4, 5];
+
+console.log(newArr);
+// [ 1, 2, 3, 4, 5 ]
+
+console.log(...newArr);
+// 1, 2, 3, 4, 5
+```
+
+El `Spread operator` toma todos los elementos del array y también crea nueva variables y por eso solo podemos usarlo en lugares donde de otra manera escribiríamos valores separados comas.
+
+También funciona con todos los iterables. La mayoría de las estructura de datos integradas en JavaScript son iterables, excepto los objetos.
+
+**Iterables:** `arrays, strings, maps, sets. NOT objects`
+
+### Rest Pattern and Parameters
+
+```javascript
+// REST, because on LEFT side on =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+console.log(a, b, others);
+// 1 2 [ 3, 4, 5 ]
+```
+
+La sintaxis de los parámetros rest nos permiten representar un número indefinido de argumentos como un array.
+
+```javascript
+function sum(...theArgs) {
+  return theArgs.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+
+console.log(sum(1, 2, 3));
+// expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// expected output: 10
+```
+
+[rest_parameters](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
