@@ -1096,3 +1096,19 @@ const menu = [0, 2, 5, 8, 10];
 
 for (const item of menu) console.log(item);
 ```
+
+Para recorrer el indice del array podemos hacerlo con `.entries()`
+
+```javascript
+for (const item of menu.entries()) {
+  console.log(item);
+}
+```
+
+Podemos también desestructurar el array en el for-of loop
+
+```javascript
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+```
