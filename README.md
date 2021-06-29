@@ -1074,3 +1074,25 @@ console.log(a, b, others);
 ```
 
 ### Short circuiting
+
+```javascript
+// OR
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// AND
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+```
+
+### The For-of Loop
+
+```javascript
+const menu = [0, 2, 5, 8, 10];
+
+for (const item of menu) console.log(item);
+```
