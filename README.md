@@ -1328,5 +1328,4 @@ const orderSet = new Set(num);
 orderSet.clear();
 
 console.log(orderSet);
-// true
 ```
