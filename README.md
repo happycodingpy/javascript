@@ -1263,4 +1263,70 @@ for (const [key, { open, close }] of entries) {
 
 ### Sets
 
-Es una colección de valores únicos, lo que significa que los `Sets` nunca pueden tener duplicados y esa propiedad lo hace útiles para ciertas situaciones
+Es una colección de valores únicos, lo que significa que los `Sets` nunca pueden tener duplicados y esa propiedad lo hace útiles para ciertas situaciones.
+
+Un `Set` no contiene clave-valor sino que son un conjunto de valores que no permiten duplicados
+
+```javascript
+const num = [1, 2, 3, 3, 3, 3, 4, 5];
+
+const orderSet = new Set(num);
+console.log(orderSet);
+
+// Set { 1, 2, 3, 4, 5 }
+```
+
+Al igual que los arrays los `Set` también son iterables
+
+```javascript
+console.log(new Set('Hola'));
+```
+
+Para saber si existe un elemento en nuestro `Set` utilizamos `.has()`
+
+```javascript
+const str = ['Paraguay', 'Francia', 'Argentina', 'Sudafrica'];
+
+const orderSet = new Set(str);
+
+console.log(orderSet.has('Pizza'));
+// false
+
+console.log(orderSet.has('Argentina'));
+// true
+```
+
+También podemos agregar nuevos elemenos a un `Set`
+
+```javascript
+const str = ['Paraguay', 'Francia', 'Argentina', 'Sudafrica'];
+
+const orderSet = new Set(str);
+
+orderSet.add('Australia');
+// true
+```
+
+También podemos eliminar elementos
+
+```javascript
+const str = ['Paraguay', 'Francia', 'Argentina', 'Sudafrica'];
+
+const orderSet = new Set(str);
+
+orderSet.delete('Francia');
+// true
+```
+
+Los `Sets` no contienen indices. Tammbién podemos eliminar todos los elementos del `Set` utilizando `.clear()`
+
+```javascript
+const num = [1, 2, 3, 4, 5];
+
+const orderSet = new Set(num);
+
+orderSet.clear();
+
+console.log(orderSet);
+// true
+```
