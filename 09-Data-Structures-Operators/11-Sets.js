@@ -24,3 +24,8 @@ console.log(orderSet1);
 
 orderSet1.delete('Francia');
 console.log(orderSet1);
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const stafUnique = [...new Set(staff)];
+console.log(stafUnique);
