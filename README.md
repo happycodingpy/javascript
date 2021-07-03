@@ -1329,3 +1329,30 @@ orderSet.clear();
 
 console.log(orderSet);
 ```
+
+Podemos iterar los `Sets`
+
+```javascript
+const num = [1, 2, 3, 4, 5];
+
+const orderSet = new Set(num);
+
+for (const order of orderSet) {
+  console.log(order);
+}
+```
+
+Tambien podemos convertir un `Set` en un array
+
+```javascript
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const stafUnique = [...new Set(staff)];
+
+console.log(stafUnique);
+// [ 'Waiter', 'Chef', 'Manager' ]
+```
+
+Los `Set` no estan destinados a reemplazar a los array. Siempre que necesite valores en orden y eso pueda contener duplicados, usemos siempre un array. Debemos tener en cuanto a los `Set` cuando debamos trabajar con valores no duplicados, es decir: únicos
+
+### Maps
