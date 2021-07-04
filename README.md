@@ -1360,3 +1360,34 @@ Los `Set` no estan destinados a reemplazar a los array. Siempre que necesite val
 `Map` es una estructura de datos que podemos usar para asignar valores a claves. Al igual que los objetos, un `map`se puede almacenar en pares `clave-valor`.
 
 Ahora, la gran diferencia entre objetos y mapas es que en los mapas las claves pueden tener cualquier tipo de valor y esto puede ser útil. En un objeto, las claves son básicamente siempre cadenas pero en las `maps` podemos tener cualquier tipo de clave; incluso podrían ser objetos o arrays u otros maps
+
+**Metodos de los Map**
+
+`set()` recibe los valores para el Map
+
+```javascript
+const rest = new Map();
+
+rest.set('name', 'Clasico Argentino');
+rest.set(1, 'Buenos Aires, Argentina');
+rest.set(2, 'Fiorentina, Italia');
+console.log(rest);
+```
+
+`get()` devuelve los valores de los Map
+
+```javascript
+const rest = new Map();
+rest.set('name', 'Clasico Argentino');
+
+console.log(rest.get('name'));
+```
+
+`has()` devuelve `true` si la clave existe o `false` no existe
+
+```javascript
+const rest = new Map();
+rest.set('name', 'Clasico Argentino');
+
+console.log(rest.has('name'));
+```
