@@ -1367,10 +1367,10 @@ Ahora, la gran diferencia entre objetos y mapas es que en los mapas las claves p
 
 ```javascript
 const rest = new Map();
-
 rest.set('name', 'Clasico Argentino');
 rest.set(1, 'Buenos Aires, Argentina');
 rest.set(2, 'Fiorentina, Italia');
+
 console.log(rest);
 ```
 
@@ -1383,7 +1383,7 @@ rest.set('name', 'Clasico Argentino');
 console.log(rest.get('name'));
 ```
 
-`has()` devuelve `true` si la clave existe o `false` no existe
+`has()` devuelve `true` si la clave existe o `false` si no existe
 
 ```javascript
 const rest = new Map();
