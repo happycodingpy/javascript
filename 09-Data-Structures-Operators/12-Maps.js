@@ -63,3 +63,10 @@ console.log(paises);
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Paises ${key}: ${value}`);
 }
+
+// Convet map to array
+console.log([...paises]);
+
+console.log(paises.entries());
+console.log(paises.keys());
+console.log(paises.values());
