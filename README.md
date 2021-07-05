@@ -1594,4 +1594,4 @@ movements.forEach((movement, index, array) => {
 `(movement, index, array)` es la forma de escribir un forEach para poder iterarlo. En este caso `movement` es el elemento principal, `index` es el índice del forEach y `array` representa que se está trabajando con una array
 
 El orden debe ser como está escrito aquí:
-`movements.forEach((movement, index, array) =>{})`
+`(movement, index, array)`
