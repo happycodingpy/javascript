@@ -1391,3 +1391,54 @@ rest.set('name', 'Clasico Argentino');
 
 console.log(rest.has('name'));
 ```
+
+`size` devuelve el tamaño del Map
+
+```javascript
+const rest = new Map();
+rest.set('name', 'Clasico Argentino');
+rest.set(1, 'Buenos Aires, Argentina');
+rest.set(2, 'Fiorentina, Italia');
+
+console.log(rest.size);
+```
+
+`clear()` elimina todo el Map
+
+```javascript
+const rest = new Map();
+rest.set('name', 'Clasico Argentino');
+rest.set(1, 'Buenos Aires, Argentina');
+rest.set(2, 'Fiorentina, Italia');
+
+rest.clear();
+```
+
+También los `Map` pueden recibir arrays
+
+```javascript
+const arr = [1, 2, 3];
+
+const arrMap = new Map();
+arrMap.set(arr, 'Test');
+
+console.log(arrMap.get(arr));
+```
+
+### Maps: iteracion
+
+```javascript
+const paises = new Map([
+  [1, 'Argentina'],
+  [2, 'Paraguay'],
+  [3, 'Brasil'],
+  [4, 'Uruguay'],
+]);
+console.log(paises);
+
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Paises ${key}: ${value}`);
+}
+```
+
+Para iterar los `Map` utilizamos los pares `clave-valor` como en este ejemplo: `[key, value]`
