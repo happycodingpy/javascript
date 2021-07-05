@@ -1442,3 +1442,54 @@ for (const [key, value] of question) {
 ```
 
 Para iterar los `Map` utilizamos los pares `clave-valor` como en este ejemplo: `[key, value]`
+
+**entries, keys & values**
+
+```javascript
+console.log([...paises.entries()]);
+console.log([...paises.keys()]);
+console.log([...paises.values()]);
+```
+
+### Convertir un Map en Array
+
+```javascript
+const paises = new Map([
+  [1, 'Argentina'],
+  [2, 'Paraguay'],
+  [3, 'Brasil'],
+  [4, 'Uruguay'],
+]);
+
+console.log([...paises]);
+```
+
+### ¿Qué estructura de datos elegir?
+
+**¿Solo necesitamos una lista simple de valores?**
+
+Si es asi, usaremos un `array o un set` pero si necesitamos pares `clave-valor`, entonces necesitamos un `objeto o un map`
+
+La diferencia es que con un par `clave-valor` tenemos una forma de describir los valores mientras que en una lista como un array o un set solamente tenemos los valores
+
+**Arrays vs Sets**
+
+Debemos usar un `array` siempre que se necesite almacenar valores en orden y cuando estos valores puedan contener duplicados. También siempre debemos usar un `array` cuando necesitemos manipular datos porque hay un montón de `métodos de array` útiles
+
+Debemos usar un `set` solo cuando se trabaja con valores únicos y no necesitamos duplicados. También podemos utilizar `set` en situaciones en las que el alto rendimiento es realmente importante porque operaciones como buscar un elemento o eliminar un elemento de un `set` pueden ser inserciones de hasta 10 veces más rápidas que en un `array`
+
+Otro uso de un `set` es para eliminar valores duplicados de un `array`
+
+Los `Sets` no estan destinados a reemplazar a un `Array` pero si a complementarlos siempre que se trate de valores únicos
+
+**Objetos vs Maps**
+
+Debemos usar estas estructuras de datos de valores clave siempre que necesitemos describir los valores usando claves.
+
+Los `Objetos` han sido la estructura tradicional de datos de valores `clave` simplemente porque no teníamos `maps` anteriormente a ES6. Pero usar objetos simplemente como almacenes de valores clave tien un par de desventajas técnicas
+
+Los `Maps` son mucho mejores para `clave-valor` simples porque ofrecen un mejor rendimiento. Las claves de `map` pueden tener cualquier tipo de datos y también son fáciles de iterar y es fácil de calcular el tamaño de un mapa
+
+En resumen: debe usar `map` cuando simplemente necesite asignar claves a valores y también cuando necesite claves que no sean string
+
+Para trabajar con datos JSON probablemente usaremos objetos
