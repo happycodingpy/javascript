@@ -1595,3 +1595,64 @@ movements.forEach((movement, index, array) => {
 
 El orden debe ser como está escrito aquí:
 `(movement, index, array)`
+
+`forEach` siempre recorrera el array completamente
+por ello si necesitamos salir de un bucle, entonces debemos utilizar un `for loop` normal: `for (let i=0; i > 10; i++)`
+
+**forEach con Map**
+
+```javascript
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+```
+
+**forEach con Set**
+
+```javascript
+const currSet = ['USD', 'USD', 'EUR', 'GBP', 'GBP'];
+const currenciesUnique = new Set(currSet);
+
+currenciesUnique.forEach(value => {
+  console.log(`${value}`);
+});
+```
+
+### Map, Filter, Reduce
+
+**Map**
+
+Map devuelve una nueva matriz que contiene los resultados de aplicar una operación en todos los elementos originales de la matriz. En este ejemplo vamos a multiplicar cada elemento por 2 y retornara un nuevo array con los valores multiplicados por dos
+
+```javascript
+const a = [3, 1, 4, 5, 3, 2];
+a.map(item => item * 2);
+```
+
+**Filter**
+
+Retorna una nueva matriz que contiene los elementos de la matriz que pasó una condición de prueba especificada. En este ejemplo vamos a filtrar todos los elementos mayores a 3
+
+```javascript
+const a = [3, 1, 4, 5, 3, 2];
+a.filter(item => item > 3);
+```
+
+Todos los elementos que pasen la prueba se convertirán en un nuevo array filtrado
+
+**Reduce**
+
+Usamos para reducir todos los elementos del array original en un solo valor y un ejemplo de esto puede ser sumar todos los elementos de un array
+
+```javascript
+const a = [3, 1, 4, 5, 3, 2];
+a.reduce((acc, curr) => acc + curr, 0);
+```
+
+![transformacion de datos](https://github.com/hugoorlando/javascript/blob/main/img/map_filter_reduce.png)
