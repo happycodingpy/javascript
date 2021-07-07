@@ -13,3 +13,23 @@ movements.forEach((movement, index, array) => {
     ? console.log(`Movement ${index + 1}: You deposited ${movement}`)
     : console.log(`Movement ${index + 1}: You withdrew ${Math.abs(movement)}`);
 });
+
+// forEach with Maps
+console.log('-- forEach with Maps --');
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+
+// Set
+const currSet = ['USD', 'USD', 'EUR', 'GBP', 'GBP'];
+const currenciesUnique = new Set(currSet);
+
+currenciesUnique.forEach(value => {
+  console.log(`${value}`);
+});
